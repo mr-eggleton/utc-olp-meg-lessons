@@ -1,0 +1,17 @@
+<aside class="related_pages">
+  {{#each page.data.related_pages as | subpage | }}
+  {{!log "subpage" subpage}}
+    <figure>
+      <a href="{{subpage.page.url}}"> 
+      <img src="{{ subpage.page.data.main_image.url }}" alt="{{subpage.page.data.main_image.alt}}" >
+      </a>
+      <figcaption>
+        <a href="{{subpage.page.url}}"> 
+      <em>{{asText subpage.page.data.title }}</em>. 
+        {{ subpage.page.data.content.0.text }} ... {{! first line/paragragh of text }}
+        {{! asText subpage.page.data.content }}
+        </a>
+      </figcaption>
+    </figure>
+  {{/each}}
+</aside>

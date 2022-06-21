@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@500&display=swap');
+
+      body { font-family: 'Droid Serif';}
+      .remark-slide-content, .remark-code{
+        font-size: 28px;
+      }
+      h1, h2, h3, h4 {
+        font-family: 'Oxanium', cursive;
+        j-font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-slide-content h1, .remark-slide-content h2 {
+        font-size: 55px;
+      }
+      .remark-slide-content h3 {
+        font-size: 45px;
+      }
+      .remark-slide-content h4 {
+        font-size: 35px;
+      }
+      
+      .remark-code, .remark-inline-code { 
+        font-family: 'Ubuntu Mono'; 
+        background: #F0F0F0;
+      }
+      .remark-slide-content {
+        background-image: url(https://www.utcsheffield.org.uk/olp/assets/sites/3/2021/07/UTC-Sheffield-Olympic-Legacy-Park-Horizontal.svg);
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        background-size: 25%;
+      }
+      
+      .remark-slide-content blockquote p{
+        background: #F0F0F0;
+      }
+      
+      .columns {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 70vh;
+      }
+      
+      .columns div p{
+        font-size:30pt;    
+        vertical-align: middle;
+      }
+      
+      .columns div li{
+        font-size:30pt;    
+        vertical-align: middle;
+      }
+      
+      .columns div {
+        height:100%;
+        padding:1em 0.5em;
+      }
+      
+      
+         /* Two-column layout */
+      .right-column {
+        background:#009BB4;
+        color:white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+{{markdown}}
+    </textarea>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js" integrity="sha512-bj/tdW5m8Fiyt169efxoa7k2VvD4nE/IxHrBHagqhFleqZuFpmGD75RUrOta73Fw3vItyrwNKAVSeFY1CenpFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      var slideshow = remark.create({
+        ratio: '16:9',
+      });
+    </script>
+  </body>
+</html>

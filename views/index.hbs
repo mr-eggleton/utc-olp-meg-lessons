@@ -1,0 +1,40 @@
+{{#extend "title" }} Home {{/extend}}
+<article id="toparticle">
+  <header><h2>{{asText page.data.title }}</h2></header>
+  {{{asHTML page.data.content }}}
+</article>
+
+{{#if page.data.main_image.url }}
+  <img src="{{ page.data.main_image.url }}" alt="{{page.data.main_image.alt}}">
+{{/if}}
+{{#if page.data.embed.html }}
+  <div class="youtubecontainer">
+    {{{ page.data.embed.html }}}
+  </div>
+{{/if}}
+
+<section class="gallery">
+  {{#each page.data.images }}
+      <img src="{{ this.image.url }}" alt="{{this.image.alt}}" >
+  {{/each}}
+</section>
+
+
+<aside class="related_pages">
+  {{#each page.data.related_pages as | subpage | }}
+    <figure>
+      <a href="{{subpage.page.url}}"> 
+      <img src="{{ subpage.page.data.main_image.url }}" alt="{{subpage.page.data.main_image.alt}}" >
+      </a>
+      <figcaption>
+        <a href="{{subpage.page.url}}"> 
+      <em>{{asText subpage.page.data.title }}</em>. 
+        {{ subpage.page.data.content.0.text }} ... {{! first line/paragragh of text }}
+        {{! asText subpage.page.data.content }}
+        </a>
+      </figcaption>
+    </figure>
+  {{/each}}
+</aside>
+
+{{> tweets limit=4 }}
