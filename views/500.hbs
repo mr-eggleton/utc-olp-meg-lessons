@@ -1,0 +1,14 @@
+{{#extend "title" }} 500  {{/extend}} 
+{{ log "error" error }}
+<h2>
+   Error : 
+  {{#if error.response}} 
+    {{error.response.type}}
+</h2>
+    <p>
+      {{error.response.message}}
+    </p>
+  {{else}}
+    <h2>{{error}}</h2>
+  {{/if}}
+

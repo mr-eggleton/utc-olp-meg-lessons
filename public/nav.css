@@ -1,0 +1,104 @@
+/* Navigation CSS - Mobile First */
+/* Which of our main colours will be used for which role in the nav*/
+:root {
+  --nav-bg: var(--primary);
+  --on-nav-bg: var(--on-primary);
+  --nav-hover: var(--secondary);
+  --on-nav-hover: var(--on-secondary);
+}
+
+/* On mobile hide the menu by default */
+nav {
+  display: none;
+  background-color: var(--nav-bg);
+  color: var(--on-nav-bg);
+}
+
+/* make the nav links go all the way acros */
+nav a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
+
+/* make all the nav links plain and contrasting*/
+nav a:link,
+nav a:visited,
+nav a:active {
+  text-decoration: none;
+  color: var(--on-nav-bg);
+}
+
+/* on hover change the colours */
+nav a:hover {
+  background-color: var(--nav-hover);
+  color: var(--on-nav-hover);
+}
+
+/* make the hamburger link plain and contrasting */
+#hamnav a:link,
+#hamnav a:visited,
+#hamnav a:active {
+  text-decoration: none;
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+
+/* On Tablet & Desktop the nav should be visible */
+@media only screen and (min-width: 768px) {
+  nav {
+    display: block;
+  }
+
+  #hamnav a {
+    display: none;
+  }
+}
+
+/* Desktop on Desktop I want the nav background surface colours*/
+@media only screen and (min-width: 1000px) {
+  :root {
+    --nav-bg: var(--surface);
+    --on-nav-bg: var(--on-surface);
+  }
+}
+
+
+/* Search Styling */
+:root {
+  --search-bg: var(--nav-bg);
+  --on-search-bg: var(--on-nav-bg);
+  --search-hover: var(--nav-hover);
+  --on-nav-hover: var(--on-nav-hover);
+}
+
+@media only screen and (min-width: 1000px) {
+  :root {
+    --search-bg: var(--primary);
+    --on-search-bg: var(--on-primary);
+  }
+}
+
+#searchresults a{
+  display:block;  
+}
+
+/* make all the nav links plain and contrasting*/
+#searchresults a:link,
+#searchresults a:visited,
+#searchresults a:active {
+  text-decoration: none;
+  color: var(--on-search-bg);
+}
+
+/* on hover change the colours */
+#searchresults a:hover {
+  background-color: var(--search-hover);
+  color: var(--on-search-hover);
+}
+
+#searchbox label{
+  text-decoration: none;
+  background-color: var(--primary);
+  color: var(--primary);
+}
