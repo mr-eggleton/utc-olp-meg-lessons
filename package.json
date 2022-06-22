@@ -1,33 +1,32 @@
 {
-  "name": "pets-prismic",
-  "description": "Prismic Express Example",
-  "engines": {
-    "node": "16.x"
-  },
-  "type": "module",
+  "name": "glitch-hello-eleventy",
+  "version": "0.1.0",
+  "description": "A simple blog, set up with Eleventy.",
   "scripts": {
-    "start": "node server.js"
-  },
-  "homepage": "https://github.com/buttercms/buttercms-node-example",
-  "author": "Mr Eggleton <meggleton@utcsheffield.org.uk>",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/buttercms/buttercms-node-example.git"
+    "start": "eleventy --serve",
+    "build": "NODE_ENV=production eleventy"
   },
   "dependencies": {
-    "twitter-api-v2": "^1.12.2",
-    "express": "^4.18.1",
-    "hbs": "^4.2.0",
-    "@prismicio/helpers": "^2.3.1",
-    "@prismicio/client": "^6.5.1",
-    "node-fetch": "^3.2.5",
-    "markdown-it": "^13.0.1",
-    "highlight.js": "^11.5.1",
-    "markdown-it-named-headings": "^1.1.0",
-    "markdown-it-id-and-toc": "^3.6.2",
-    "express-session": "^1.17.3",
-    "axios": "^0.27.2",
-    "npm": "^8.12.0"
+    "eleventy-plugin-seo": "0.5.2",
+    "luxon": "^2.4.0",
+    "eleventy-plugin-prismic": "^0.2.1"
   },
-  "license": "MIT"
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/glitch-hello-eleventy"
+  },
+  "glitch": {
+    "projectType": "generated_static"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }
